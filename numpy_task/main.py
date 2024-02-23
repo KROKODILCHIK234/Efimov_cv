@@ -15,7 +15,6 @@ assert c.ndim == 3 and c.sum() / c.size == 1
 d = np.linspace(-5, 4, 10)
 
 assert np.all(d == np.array([-5, -4, -3, -2, -1, 0, 1, 2, 3, 4]))
-print(d)
 
 e = np.linspace(0, 1, 5)
 
