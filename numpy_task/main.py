@@ -58,7 +58,7 @@ nc = np.mean(n)
 assert nc == 3.5
 
 o = np.array([2, 2, 2, 2])
-oc = o.reshape(2, 2)
+oc = o.reshape((2, 2))
 
 assert oc.ndim == 2 and oc.shape == (2, 2)
 
