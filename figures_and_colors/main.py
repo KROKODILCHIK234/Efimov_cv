@@ -15,7 +15,10 @@ def determine_figure_color(region, hsv_image, border_values):
     colors = ['красный', 'желтый', 'зеленый', 'светло-зеленый', 'синий', 'фиолетовый']
     for i, border_color in enumerate(border_values):
         if color_value < border_color:
-            return colors[i]
+            if i < len(colors):
+                return colors[i]
+            else:
+                return 'Неизвестный цвет'
     return 'red'
 
 image = plt.imread('balls_and_rects.png')
@@ -37,4 +40,5 @@ for region in regions_info:
 
 print('Total Regions:', labeled_regions.max())
 print('Circles:', figures_circle)
+print('Rectangles:', figures_rect)
 print('Rectangles:', figures_rect)
